@@ -5,59 +5,44 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui
 
 const data = [
     {
-        "name": "Mr. Krishnapal Singh Solanki",
-        "position": "CEO",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/kp-sir.png"
+        "name": "Alex Chen",
+        "position": "CEO & Co-Founder",
+        "imgUrl": ""
     },
     {
-        "name": "Dr. Hepesh Shepherd",
-        "position": "Chief Product Officer",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/hipesh%20%281%29%20%281%29.jpg"
-    },
-    {
-        "name": "Mr. Sachin Awari",
+        "name": "Sarah Martinez",
         "position": "CTO",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/sachin-awari.png"
+        "imgUrl": ""
     },
     {
-        "name": "Mr. Mangesh Jadhav",
-        "position": "Software Developer",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/mangesh-sir.png"
+        "name": "David Kumar",
+        "position": "Head of Security",
+        "imgUrl": ""
     },
     {
-        "name": "Sritam Kumar Jena",
-        "position": "Software Developer",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/sritam-01.jpeg"
+        "name": "Emily Johnson",
+        "position": "Lead ML Engineer",
+        "imgUrl": ""
     },
     {
-        "name": "Mr. Milan Pal",
-        "position": "Manager",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/milan1.jpeg"
+        "name": "Michael Zhang",
+        "position": "Product Manager",
+        "imgUrl": ""
     },
     {
-        "name": "Mr. Dayal Thakur",
-        "position": "Software Developer",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/dayal%20%281%29.png"
+        "name": "Lisa Anderson",
+        "position": "Head of Customer Success",
+        "imgUrl": ""
     },
     {
-        "name": "Mr. Sandesh Naik",
-        "position": "Software Developer",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/sandesh-sir.png"
+        "name": "James Wilson",
+        "position": "Senior DevOps Engineer",
+        "imgUrl": ""
     },
     {
-        "name": "Mr. Himanshu Yadav",
-        "position": "Software Developer",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/himasu.png"
-    },
-    {
-        "name": "Mr. Sopan Vyankat Nadagude",
-        "position": "Software Developer",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/sopan-sir.png"
-    },
-    {
-        "name": "Mr. Pankaj Narayan",
-        "position": "Software Developer",
-        "imgUrl": "https://www.koneventures.com/assets/img/team/pankaj.jpeg"
+        "name": "Rachel Patel",
+        "position": "Security Researcher",
+        "imgUrl": ""
     }
 ]
 
@@ -75,30 +60,31 @@ const Team = () => {
                     className='w-full'
                 >
                     <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-center lg:text-start block">
-                        MEET OUR TEAM
+                        MEET THE TEAM
                     </span>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                    {data.map((item) => (
+                    {data.map((item, index) => (
                         <motion.div
+                            key={index}
                             initial={{ opacity: 0, y: -30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className='h-[400px] w-[300px] mt-16 relative'
                         >
-                            <div className="top-4 right-4 -z-10 absolute  object-cover rounded-2xl h-full w-full bg-blue-700" style={{ backgroundImage: "url('/heroimg.jpg')" }}>
+                            <div className="top-4 right-4 -z-10 absolute  object-cover rounded-2xl h-full w-full bg-gradient-to-br from-blue-600 to-purple-600">
 
                             </div>
-                            <Card className='h-full w-full p-3 rounded-2xl  cursor-pointer duration-500 transition-all ease-in-out border-slate-600 border'>
-                                <img src={item.imgUrl} alt="" className='rounded-2xl w-full object-cover object-top  h-[70%] ' />
+                            <Card className='h-full w-full p-3 rounded-2xl  cursor-pointer duration-500 transition-all ease-in-out border-slate-600 border flex flex-col'>
+                                <div className='flex items-center justify-center rounded-2xl w-full h-[70%] text-8xl bg-gradient-to-br from-slate-100 to-slate-200'>
+                                    👤
+                                </div>
                                 <CardHeader>
                                     <CardTitle className='text-xl'>{item.name}</CardTitle>
                                 </CardHeader>
                                 <CardContent className='text-sm'>
                                     {item.position}
-                                </CardContent>
-                                <CardContent>
                                 </CardContent>
                             </Card>
 
