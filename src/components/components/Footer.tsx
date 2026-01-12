@@ -4,14 +4,14 @@ const Footer = () => {
     return (
       <footer className="bg-slate-950 text-white py-20 relative overflow-hidden">
         {/* Large Watermark */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[30%] pointer-events-none select-none opacity-[0.03] whitespace-nowrap z-0">
-            <span className="text-[25vw] font-bold tracking-tighter leading-none">JIMBL</span>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[20%] pointer-events-none select-none opacity-[0.03] whitespace-nowrap z-0">
+            <span className="text-[35vw] font-bold tracking-tighter leading-none">JIMBL</span>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div className="col-span-1 md:col-span-2">
-                    <h2 className="text-3xl font-bold mb-6 tracking-tight">Jimbl.</h2>
+                    <h2 className="text-3xl font-bold mb-6 tracking-tight">Jimbl</h2>
                     <p className="text-slate-400 max-w-sm mb-8">
                         The immune system for AI data pipelines. Protecting the next generation of intelligent applications from data poisoning, injection attacks, and privacy leaks.
                     </p>

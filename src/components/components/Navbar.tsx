@@ -45,11 +45,11 @@ const Navbar = () => {
                     
                  
                     <ul className='hidden md:flex gap-10 text-sm font-medium items-center'>
-                        {['Features', 'Use Cases', 'Integration', 'Testimonials'].map((item) => (
+                        {['Features', 'Use Cases', 'Integration', 'Architecture'].map((item) => (
                             <li key={item} className='relative group'>
                                 <a 
                                     href={`#${item.toLowerCase().replace(' ', '-')}`}
-                                    onClick={(e) => scrollToSection(e, item.toLowerCase().replace(' ', '-'))}
+                                       onClick={(e) => scrollToSection(e, item === 'Use Cases' ? 'usecases' : item.toLowerCase())}
                                     className='text-slate-300 hover:text-white transition-colors duration-200'
                                 >
                                     {item}
@@ -87,11 +87,11 @@ const Navbar = () => {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
         <ul className='flex flex-col gap-8 text-2xl text-center font-bold'>
-            {['Features', 'Use Cases', 'Integration', 'Testimonials', 'Contact'].map((item) => (
+            {['Features', 'Use Cases', 'Integration', 'Architecture', 'Contact'].map((item) => (
                 <li key={item}>
                     <a 
                         href={`#${item.toLowerCase().replace(' ', '-')}`}
-                        onClick={(e) => scrollToSection(e, item.toLowerCase().replace(' ', '-'))}
+                        onClick={(e) => scrollToSection(e, item === 'Use Cases' ? 'usecases' : item.toLowerCase())}
                         className='cursor-pointer hover:text-slate-300 transition-colors'
                     >
                         {item}
