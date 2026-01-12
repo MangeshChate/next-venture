@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between">
                     <a href="#" className="text-3xl font-bold text-white tracking-tighter relative z-50" onClick={(e) => scrollToSection(e, 'hero')}>
-                        Jimbl.
+                        Jimbl
                     </a>
                     
                  
